@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gesture Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gesture Music Player</h1>
+
+    <div class="upload-section">
+      <label>Main Audio:</label>
+      <input type="file" id="mainAudioUpload" accept="audio/*">
+
+      <label>BGM Audio:</label>
+      <input type="file" id="bgmAudioUpload" accept="audio/*">
+    </div>
+
+    <audio id="mainAudio" controls></audio>
+    <audio id="bgmAudio" loop></audio>
+
+    <div class="controls">
+      <label>Volume:</label>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+    </div>
+
+    <button id="connectButton">Connect to Arduino</button>
+
+    <p id="status">Status: Not connected</p>
+  </div>
+
+  <script src="music.js"></script>
+</body>
+</html>
